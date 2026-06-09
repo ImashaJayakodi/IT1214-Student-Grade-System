@@ -70,7 +70,16 @@ class Main{
 					
                     break;
                 case 4:
-					  
+					  if(studentList.isEmpty()){
+						System.out.println("No records");
+					}
+					double sum=0;
+					for(Student s:studentList){
+						sum=sum+s.getMarks();
+					}
+					double avg=sum/studentList.size();
+						System.out.println("total num of Students ="+studentList.size());
+						System.out.println("Avarage marks of Students =  "+avg);
                     
                     break;
                 case 5:
