@@ -21,7 +21,37 @@ class Main{
 		choice = sc.nextInt();
             sc.nextLine(); 
 
-            
+            switch (choice) {
+                case 1:
+					sc.nextLine();
+                    System.out.println("Enter Id");
+					String id=sc.nextLine();
+					System.out.println("Enter Name");
+					String name=sc.nextLine();
+					System.out.println("enter Mark");
+					int m=sc.nextInt();
+					
+					Student s1=new Student(id,name,m);
+					studentList.add(s1);
+					System.out.println("Added");
+                    break;
+                case 2:
+					
+                    break;
+                case 3:
+                    
+					
+                    break;
+                case 4:
+					  
+                    
+                    break;
+                case 5:
+                    System.out.println("Exiting system. Goodbye!");
+                    break;
+                default:
+                    System.out.println("Invalid choice! Please select an option from 1 to 5.");
+			}
 	}while (choice != 5);	
         
 			
