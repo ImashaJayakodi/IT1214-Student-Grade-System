@@ -23,7 +23,7 @@ class Main{
 
             switch (choice) {
                 case 1:
-					sc.nextLine();
+					
                     System.out.println("Enter Id");
 					String id=sc.nextLine();
 					System.out.println("Enter Name");
@@ -36,10 +36,37 @@ class Main{
 					System.out.println("Added");
                     break;
                 case 2:
-					
+					if(studentList.isEmpty()){
+						System.out.println("No records");
+					}
+					else{
+						for(Student s:studentList){
+							s.displayStudentDetails();
+						}
+					}
+                    
                     break;
                 case 3:
-                    
+                       if(studentList.isEmpty()){
+						System.out.println("No records");
+					}
+					else{
+						System.out.println("Enter st Id");
+						String search=sc.nextLine();
+						boolean found=false;
+						
+						for(Student s:studentList){
+							if(s.getStudentId().equalsIgnoreCase(search)){
+								System.out.println("found");
+								found=true;
+								s.displayStudentDetails();
+							}
+							
+						}if(!found){
+							System.out.println("Student with ID '" + search + "' not found.");
+						}
+						
+					}
 					
                     break;
                 case 4:
